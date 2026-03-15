@@ -1,0 +1,22 @@
+Bug Notes
+
+Game Restart Issue
+When the game is restarted, the interface does not fully reset. 
+The text from the previous game remains visible on the screen instead of 
+clearing before the new game begins.
+
+Difficulty Range and Attempt Settings
+The difficulty levels are not using the correct ranges and attempt limits. 
+They should be configured as follows:
+
+Easy: Range 1–20 with 6 attempts
+
+Normal: Range 1–100 with 8 attempts
+
+Hard: Range 1–50 with 5 attempts
+
+Incorrect Guess Feedback
+The game is sometimes providing incorrect feedback (e.g., “higher” or “lower”) 
+when the user guesses a number. Ensure that the secret number is generated 
+within the correct range for the selected difficulty and that comparisons 
+are working properly.
