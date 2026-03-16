@@ -8,12 +8,13 @@ def get_range_for_difficulty(difficulty: str):
         return 1, 50
     return 1, 100
 
-
-def parse_guess(raw: str):
+#FIX: Refactored logic into logic_utils.py using Copilot Agent mode).
+def parse_guess(raw: str, low: int = None, high: int = None):
     """
     Parse user input into an int guess.
 
     Returns: (ok: bool, guess_int: int | None, error_message: str | None)
+    If low and high are provided, rejects values outside that range.
     """
     if raw is None or raw == "":
         return False, None, "Enter a guess."
@@ -26,9 +27,13 @@ def parse_guess(raw: str):
     except Exception:
         return False, None, "That is not a number."
 
+    if low is not None and high is not None:
+        if value < low or value > high:
+            return False, None, f"Please enter a number between {low} and {high}."
+
     return True, value, None
 
-
+#FIX: Refactored logic into logic_utils.py using Copilot Agent mode).
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
