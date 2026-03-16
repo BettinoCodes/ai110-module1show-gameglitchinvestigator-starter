@@ -46,5 +46,3 @@ This is a number guessing game where the player tries to guess a secret number w
 
 ## 📸 Demo
 
-![alt text](image.png)
-
