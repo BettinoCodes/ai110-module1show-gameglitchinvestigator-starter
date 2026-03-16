@@ -46,5 +46,11 @@ This is a number guessing game where the player tries to guess a secret number w
 
 ## 📸 Demo
 
-![alt text](image.png)
+**Fixed game — winning screen (Easy mode, secret was 7):**
+
+![Winning game screen](images/Screenshot%202026-03-16%20012231.png)
+
+**All 12 pytest tests passing:**
+
+![Pytest passing](images/Screenshot%202026-03-16%20011656.png)
 
